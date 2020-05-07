@@ -1,0 +1,6 @@
+jotshnatripathi@gmail.com
+JOTSHNA
+TRIPATHI
++91 7709523906
+JotshnaTripathi
+jotshnatripathi
