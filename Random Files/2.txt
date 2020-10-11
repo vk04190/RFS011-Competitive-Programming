@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<conio.h>
+#define a 5
+#define b 5
+main()
+{
+	int c;
+	c=b*a;
+	printf("Product is : %d",c);
+	getchar();
+}

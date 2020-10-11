@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+	int a,b;
+    printf("Enter Value for A ");
+	scanf("%d",&a);
+	printf("Enter Value for B ");
+	scanf("%d",&b);
+	printf("The Value Of A is %d \n",a);
+	printf("The Value Of B is %d \n",b);
+	printf("The Incremented value of A is %d \n",++a);
+	printf("The Decremented value of A is %d \n",--a);
+	printf("The Incremented value of B is %d \n",++b);
+	printf("The Decremented value of B is %d \n",--b);
+	getch();
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+char	x[3][5];
+main()
+{
+	char	(*y)[5];
+	int	i;
+	strcpy(x[0],"abcd");
+	strcpy(x[1],"efgh");
+	strcpy(x[2],"ijkl");
+	printf("%s %s\n",x[0],x[1]);
+	y = &(x[1]);
+	printf("%s %s\n",y,y+1);
+	getch();
+}
+
+
+

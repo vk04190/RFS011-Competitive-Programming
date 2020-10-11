@@ -1,0 +1,13 @@
+#include <stdio.h>
+#define mf
+
+main()
+{
+#ifdef ms
+      printf("This is a Microsoft\n");
+#endif
+#ifdef mf
+      printf("This is a Mainframe\n");
+#endif
+getchar();
+}

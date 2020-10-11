@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+	float x,y;
+//	clrscr();
+	printf("Enter X ");
+	scanf("%f",&x);
+	printf("Enter Y ");
+	scanf("%f",&y);
+	printf("The sum of X and Y is %f\n",x+y);
+	getch();
+}

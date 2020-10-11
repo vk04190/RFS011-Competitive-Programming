@@ -1,0 +1,12 @@
+#include <stdio.h>
+#define vax1
+
+main()
+{
+#ifdef vax
+      printf("This is a Vax\n");
+#else
+	  printf("This is a Sun\n");
+#endif
+getch();
+}

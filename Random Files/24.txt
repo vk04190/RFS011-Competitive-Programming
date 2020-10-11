@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+main()
+{
+   int x, y;
+   read:
+   printf("Enter a number ");
+   scanf("%d", &x);
+   if (x> 0)
+   {
+	   y = x*x;
+   }
+   printf("The number you have entered is %d and it's square is %d \n", x, y);
+   getch();
+   goto read;
+}

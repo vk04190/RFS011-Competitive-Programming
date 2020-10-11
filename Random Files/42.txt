@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+#include<dos.h>
+#include<stdlib.h>
+
+main()
+{
+      int age,eno;
+      FILE *fp;
+      float sal;
+      char ename[80];
+      fp=fopen("details.txt","a");
+	  if(fp==NULL)
+      {
+                 getch();
+                 exit(0);
+      }
+      printf("Number : ");
+      scanf("%d",&eno);
+      fflush(stdin);
+      printf("Name : ");
+      gets(ename);
+      printf("Age : ");
+      scanf("%d",&age);
+      fflush(stdin);
+      printf("Salary : ");
+      scanf("%f",&sal);
+      fflush(stdout);
+      fprintf(fp,"%d\n Number",eno);
+      fprintf(fp,"%s\n Name",ename);
+      fprintf(fp,"%d\n Age",age);
+      fprintf(fp,"%7.2f\n Salary",sal);
+      printf("Writing completed");
+      getch();
+      fclose(fp);
+}

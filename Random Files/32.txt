@@ -1,0 +1,21 @@
+#include <string.h>
+#include <stdio.h>
+
+main()
+{
+  char str1[80], str2[80];
+  int i;
+ // clrscr();
+  printf("Enter the first string:  ");
+  gets(str1);
+  printf("Enter the second string:  ");
+  gets(str2);
+
+  if (strlen(str1)+ strlen(str2) < 80) 
+  {
+	strcat(str1, str2);
+	printf("%s\n", str1);
+  }
+  getch();
+
+}

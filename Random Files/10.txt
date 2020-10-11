@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+#define MAX(a,b) a>b?a:b
+
+main()
+{
+      int x,y;
+      printf("Enter Value for X ");
+      scanf("%d",&x);
+      printf("Enter Value for Y ");
+      scanf("%d",&y);
+      printf("The Greatest between %d and %d is %d",x,y, MAX(x,y));
+      getch();
+}

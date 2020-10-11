@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+main()
+{
+    char str[80];
+    char token[10];
+    char  *p , *q;
+
+    printf("Enter a sentence: ");
+    gets(str);
+
+    p = str;
+
+    while (*p) 
+    {
+      q = token;
+      while (*p != ' ' && *p) 
+      {
+        *q = *p;
+        q++ ; p++;
+      }
+      if (*p) p++;
+      *q = '\0';
+      printf("\n%s\n" , token);
+	}
+	getch();
+}
+

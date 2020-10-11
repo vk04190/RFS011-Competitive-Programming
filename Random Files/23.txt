@@ -1,0 +1,14 @@
+#include<stdio.h>
+#define MAX(a,b) a>b?a:b
+
+main()
+{
+      int x,y;
+      printf("Enter a value for X ");
+      scanf("%d",&x);
+      printf("Enter a value for Y ");
+      scanf("%d",&y);
+      printf("The Maximum Number is %d",MAX(x,y));
+      getch();
+}
+      

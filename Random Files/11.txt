@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+	int a,b,c;
+	printf("Enter Value for A ");
+	scanf("%d",&a);
+	printf("Enter Value for B ");
+	scanf("%d",&b);
+	c=(a*b)+3;
+	printf("The Value of C is %d ",c);
+	getch();
+}

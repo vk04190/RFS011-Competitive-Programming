@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+main()
+{
+      int x,y,p;
+      printf("Enter two number's ");
+      scanf("%d%d",&x,&y);
+      p=x*y;
+      printf("The product of %d and %d is %d\n",x,y,p);
+      getch();
+      return(p);
+}
+

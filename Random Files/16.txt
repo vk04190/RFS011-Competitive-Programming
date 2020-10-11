@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+main()
+{
+char s[100];
+printf("Enter Your Name: ");
+scanf("%s",s);
+printf("Welcome %s",s);
+getch();
+}

@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+
+    int number = 5;
+    int guess;
+
+    printf("Enter your guess, please ");
+    scanf("%d",&guess);
+    if (guess == number)
+    {
+        printf("You are correct\n");
+    }
+    else if (guess > number)
+    {
+        printf("Your Guess is Higher\n");
+    }
+    else
+    {
+        printf("Your Guess is Lower\n");
+    }
+    getch();
+} 

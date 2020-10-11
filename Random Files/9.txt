@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+
+    int number = 5;
+    int guess;
+	printf("Enter Your Guess, Please \n");
+    scanf("%d",&guess);
+    if (guess == number)
+    {
+        printf("You are Correct\n");
+    }
+    else
+    {
+        printf("You are Wrong\n");         
+    }
+    getch();
+} 

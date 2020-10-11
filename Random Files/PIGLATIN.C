@@ -1,0 +1,126 @@
+// A piglatin generator
+//piglatin is a game in which the
+//first sound in the word is transposed to the
+//end of the word with the aplhabet 'a' added at the end of the word
+//eg:- "dog" becomes "ogda",  "lady"=>"adyla"
+
+
+//steps are
+//1.  initialise both arrays by assigning blank spaces to all the elements
+//2.  read in an entire line of text
+//3.  determine the number of words in the line(by counting the number
+//            of single blank spaces that are followed by a nonblank space)
+//4.  rearrange the words into piglatin ,on a word-by-word basis
+//     (a.)  locate the end of the word
+//     (b.)  transpose the first letter to the end of the word and then an 'a'
+//     (c.)  locate the begining of the next word
+//5.  display the entire line of paglatin
+
+
+//continue this procedure repetitively until the computer reads a line of
+//text whose first three letters are "end"
+
+//there will b two markers m1 and m2
+//m1 will indicate the position of the begining of the particular word
+//within the original line of text
+//m2 will indicate the end of the word
+
+
+
+#include<stdio.h>
+#include<conio.h>
+
+#define NUM 80
+
+char english[NUM],piglatin[NUM];
+int count=0,words=1;
+
+void initialize();
+int noofwords();
+void display();
+void piggie();
+void displaypiggie();
+
+main()
+ {
+   clrscr();
+   initialize();
+//   display();
+//   words=noofwords();
+//   printf("\n\n%d",words);
+   piggie();
+   displaypiggie();
+   getch();
+   return 0;
+ }
+
+ //step2:  scan the string
+
+void initialize()
+	{
+		  printf("Enter a sentence in english");
+		  scanf(" %[^\n]",english);
+	}
+
+//determine the number of words
+
+int noofwords()
+   {
+		for(count=0;count<NUM || english[count]!='\0';count++)
+		   {
+				if(english[count]==' ')
+				  words++;
+		   }
+		return words;
+   }
+
+//display the original string
+
+void display()
+	{
+		 puts(english);
+	}
+
+
+void piggie()
+	{
+		int c,i;
+		static int sum=0,wordcount=0;
+		char temp,m[NUM];
+		int cnt=0;
+	   //	printf("\n%d",count);
+		words=noofwords();
+		while(wordcount<=words)
+			 {
+				c=0;
+			 //	m[]={'\0'};
+				temp=english[cnt];
+				if(english[cnt]!=' '||english[cnt]=='.')
+					 {
+						 m[c++]=english[++cnt];
+					 }
+				//printf("%s",m);
+				printf("Out of loop");
+				wordcount++;
+
+				m[c]=temp;
+				m[++c]='a';
+				m[++c]=' ';
+
+				for(i=0;i<c;i++)
+				   {
+					  sum=sum+i;
+					  piglatin[sum]=m[i];
+				   }
+			 puts(m);
+//			 printf("\n");
+			 puts(piglatin);
+//			 printf("\n");
+		  }
+	   }
+
+
+	  void  displaypiggie()
+	   {
+//		 puts(piglatin);
+	   }

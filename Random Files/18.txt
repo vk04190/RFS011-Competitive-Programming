@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+main()
+{
+int i = 3, j = -1, k = 4;
+char *s = "string";
+float x = 3.14159265;
+printf("j = %.*d, %.3s x = %10.*f",i,j,s,k,x);
+getch();
+}

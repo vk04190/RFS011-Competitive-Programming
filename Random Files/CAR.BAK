@@ -1,0 +1,113 @@
+/*******************	 CAR    ************************/
+#include<stdio.h>
+#include <conio.h>
+#include <graphics.h>
+#include <math.h>
+#include <stdlib.h>
+#include <dos.h>
+
+
+void main()
+{
+ int i,gd = DETECT,gm;
+ initgraph(&gd,&gm,"c:\\tc\\bgi");
+ for(i=0;i<=getmaxx();i++)
+ {
+  setcolor(15);
+  setlinestyle(SOLID_LINE,1,3);// THICKNESS=3 ,USER PATTERN=1
+  line(0,400,getmaxx(),400); //MAX  X OF THE GIVEN SCREEN  (X1,Y1,X2,Y2)
+  setlinestyle(SOLID_LINE,1,1);//WE WANT LESS THICKNESS LINE FOR THE CAR
+  circle(i+60,380,20);  //DRAWS A CIRCLE     //REAR WHEEL OUTER CIRCLE
+  circle(i+160,380,20); //TYRES             //FRONT WHEEL OUTER CIRCLE
+  circle(i+60,380,5);                      //REAR WHEEL INNER CIRCLE
+  circle(i+160,380,5);                   //FRONT WHEEL INNER CIRCLE
+  //---------------------------------
+  line(i+60,380,i+60-20*sin(i*3.14/180),380+20*cos(i*3.14/180));
+  // this line is for drawing the line present in the tyre.
+  line(i+160,380,i+160-20*sin(i*3.14/180),380+20*cos(i*3.14/180));
+  //---------------------------------
+  line(i+80,380,i+140,380);	//Segments of car
+ // middle bottom line bet 2 tyres
+
+  line(i+40,380,i+10,380);
+  //line for lower portion of the rear wheel of the  car //length is 30
+
+  line(i+180,380,i+210,380);
+  //for lower portion of the front wheel of the car. //length is 30
+
+  arc(i+60,380,90,180,50);      //(x,y,start angle,end angle,radius)
+  //leftmost  curve of the car
+
+  arc(i+160,380,0,90,50);           //see the fig. given below.
+  //right most curve of the car.
+
+  arc(i+110,330,0,180,50);            //see the fig. given below.
+  //upper most curve.
+
+  arc(i+110,330,100,180,40);           //see the fig. given below.
+  //upper most lefmost curve for the window.
+
+  arc(i+110,330,0,80,40);              //see the fig. given below.
+  //upper most rightmost curve for the window.
+
+  line(i+70,330,i+104,330);
+//horizontal line for the left window.
+
+  line(i+104,330,i+104,291);
+//vertical line for the left window.
+
+  line(i+150,330,i+116,330);
+//horizontal line for the right window.
+
+  line(i+116,330,i+116,291);
+//horizontal line for the right window.
+
+  setcolor(0);
+ //after performing all operations make it black that is invisible.
+
+  delay(5);
+   //-------------------------------
+
+ line(i+60,380,60+i-20*sin(i*3.14/180),380+20*cos(i*3.14/180));
+line(i+160,380,160+i-20*sin(i*3.14/180),380+20*cos(i*3.14/180));
+  //---------------------------------
+  setlinestyle(SOLID_LINE,1,1);
+  circle(i+60,380,20);
+  circle(i+160,380,20);
+  circle(i+60,380,5);
+  circle(i+160,380,5);
+  line(i+80,380,i+140,380);
+  line(i+40,380,i+10,380);
+  line(i+180,380,i+210,380);
+  arc(i+60,380,90,180,50);
+  arc(i+160,380,0,90,50);
+  arc(i+110,330,0,180,50);
+  arc(i+110,330,100,180,40);
+  arc(i+110,330,0,80,40);
+  line(i+70,330,i+104,330);
+  line(i+104,330,i+104,291);
+  line(i+150,330,i+116,330);
+  line(i+116,330,i+116,291);
+
+  if(kbhit())
+   exit(0);
+ if(i==(getmaxx()-1))
+  i=0;
+ }
+ closegraph();
+}
+
+
+
+/*
+
+     135     90     45
+	\     |     /
+	  \   |   /
+	    \ | /
+  180 --------|----------0 or 360
+	    / | \
+	  /   |   \
+	/     |     \
+     225     270    315
+*/

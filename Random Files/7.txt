@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+	char d;
+	printf("Enter Char ");
+	scanf("%c",&d);
+	printf("The Character you have entered is %c\n",toupper(d));
+	getch();
+}

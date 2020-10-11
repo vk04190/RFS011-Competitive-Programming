@@ -1,0 +1,11 @@
+#include <string.h>
+#include <stdio.h>
+
+main()
+{
+  char tempString[80];
+  printf("Enter a string:  ");
+  gets(tempString);
+  printf("The string you have entered is : %s",tempString);
+  getchar();
+}

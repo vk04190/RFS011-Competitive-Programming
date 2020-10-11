@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	int a,b;
+	printf("Enter Value for A ");
+	scanf("%d",&a);
+	printf("Enter Value for B ");
+	scanf("%d",&b);
+	printf("\nThe Sum of A and B is %d\n",a+b);
+	printf("\nThe Product of A and B is %d\n",a*b);
+	printf("\nThe Difference of A and B is %d\n",a-b);
+	printf("\nThe Division of A and B is %d\n",a/b);
+	getch();
+}
